@@ -17,3 +17,11 @@ Follow the below procedure to setup and build WeatherForecast
 
 5) Install the app onto Device.
 
+Execution of Unit Test Cases
+----------------------
+1. Install both app-debug.apk and app-debug-androidTest.apk generated After building 
+the code under "WeatherForecast\app\build\outputs\apk" Directory.
+
+2. After Installation of both of the apk run the following commnad through terminal to execute test case.
+$ adb shell am instrument -w -r   -e debug false -e class app.com.weatherforecast.ApplicationTest#TEST_WEATHER_FORECAST app.com.weatherforecast.test/android.support.test.runner.AndroidJUnitRunner
+
